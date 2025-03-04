@@ -1,22 +1,20 @@
 export default function Nav() {
   return (
-    <>
-      <header>
-        <nav className="flex text-gray-900 justify-between items-center p-4 max-w-300 mx-auto">
-          <h1> Isaac Mello </h1>
-          <ul className="flex gap-6">
-            <li>
-              <a href="#">Inicio</a>
-            </li>
-            <li>
-              <a href="#">Sobre</a>
-            </li>
-            <li>
-              <a href="#">Projetos</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    </>
+    <header>
+      <nav className="text-text mx-auto flex max-w-300 items-center justify-between p-4">
+        <h1 className="font-bold uppercase"> Isaac Mello </h1>
+        <ul className="flex gap-6 font-bold uppercase">
+          <li className="hover:text-hover transition-all">
+            <a href="#">Inicio</a>
+          </li>
+          <li className="hover:text-hover transition-all">
+            <a href="#">Sobre</a>
+          </li>
+          <li className="hover:text-hover transition-all">
+            <a href="#">Projetos</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 }

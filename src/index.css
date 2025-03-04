@@ -1,1 +1,9 @@
 @import "tailwindcss"; 
+
+@theme {
+    --default-font-family: 'Asap', sans-serif;
+    --color-hover: #FFC107;
+    --color-secondary: #FFC107;
+    --color-background: #0D0E11;
+    --color-text: #E2E4E9;
+}
