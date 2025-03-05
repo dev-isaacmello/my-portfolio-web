@@ -1,16 +1,16 @@
-import Nav from "./components/Nav";
-import Techs from "./components/Techs";
+import { Nav } from "./components/Nav";
+import { Techs } from "./components/Techs";
 import perfilImg from "./assets/perfil.png";
 
 export default function App() {
   return (
     <>
-      <div className="bg-background text-text h-screen">
+      <div className="bg-background text-text h-full">
         <header className="container mx-auto">
           <Nav />
         </header>
-        <section>
-          <div className="container mx-auto flex h-100 flex-col items-center justify-center text-center">
+        <section className="flex h-screen">
+          <div className="container mx-auto flex h-full max-w-300 flex-col items-center justify-center p-6 text-center">
             <img
               className="w-40 rounded-full border-2 border-white"
               src={perfilImg}
@@ -19,12 +19,12 @@ export default function App() {
             <div className="flex flex-col items-center justify-center gap-2 p-6">
               <span>
                 Bem vindos ao meu Portfólio Web! Meu nome é{" "}
-                <span className="text-secondary">Isac Mello</span> e eu sou
+                <span className="text-secondary">Isaac Mello</span> e eu sou
               </span>
               <h1 className="text-6xl font-bold">
                 Desenvolvedor Web Fullstack
               </h1>
-              <span className="text-gray-500">
+              <span className="max-w-200 text-gray-500">
                 Crio aplicações funcionais e envolventes que transformam
                 necessidades em soluções reais. Minha paixão pela tecnologia me
                 impulsiona a desenvolver sistemas inovadores e eficientes,

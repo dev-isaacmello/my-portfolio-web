@@ -1,4 +1,4 @@
-export default function Nav() {
+export function Nav() {
   return (
     <header>
       <nav className="text-text mx-auto flex max-w-300 items-center justify-between p-4">
