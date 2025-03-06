@@ -1,9 +1,10 @@
-@import "tailwindcss"; 
+@import "tailwindcss";
 
 @theme {
     --default-font-family: 'Asap', sans-serif;
     --color-hover: #FFC107;
     --color-secondary: #FFC107;
+    --color-third: #646464;
     --color-background: #0D0E11;
     --color-text: #E2E4E9;
     --color-html: #F16529;
@@ -15,4 +16,3 @@
 
     --default-transition-duration: 0.5s;
 }
-

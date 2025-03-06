@@ -4,6 +4,7 @@ import HtmlLogo from "../assets/html.svg";
 import javaScriptLogo from "../assets/javascript.svg";
 import reactLogo from "../assets/react.svg";
 import tailwindLogo from "../assets/Tailwind.svg";
+import typeScriptLogo from "../assets/typescript.svg";
 
 import { motion } from "framer-motion";
 
@@ -54,6 +55,19 @@ export function Techs() {
             alt="Javascript Logotipo"
           />
           <span>JavaScript</span>
+        </motion.li>
+        <motion.li
+          whileHover={{ scale: 1.2 }}
+          onHoverStart={(e) => {}}
+          onHoverEnd={(e) => {}}
+          className="flex flex-col items-center"
+        >
+          <img
+            className="w-10"
+            src={typeScriptLogo}
+            alt="Javascript Logotipo"
+          />
+          <span>Typescript</span>
         </motion.li>
         <motion.li
           whileHover={{ scale: 1.2 }}
