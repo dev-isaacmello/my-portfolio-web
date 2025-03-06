@@ -6,4 +6,13 @@
     --color-secondary: #FFC107;
     --color-background: #0D0E11;
     --color-text: #E2E4E9;
+    --color-html: #F16529;
+    --color-css: #2965F1;
+    --color-js: #F0DB4F;
+    --color-react: #61DAFB;
+    --color-tailwind: #38B2AC;
+    --color-node: #3C873A;
+
+    --default-transition-duration: 0.5s;
 }
+

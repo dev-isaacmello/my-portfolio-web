@@ -6,10 +6,10 @@ export default function App() {
   return (
     <>
       <div className="bg-background text-text h-full">
-        <header className="container mx-auto">
+        <header className="container mx-auto py-2">
           <Nav />
         </header>
-        <section className="flex h-screen">
+        <section className="flex py-12">
           <div className="container mx-auto flex h-full max-w-300 flex-col items-center justify-center p-6 text-center">
             <img
               className="w-40 rounded-full border-2 border-white"

@@ -1,11 +1,9 @@
 import gitHubLogo from "../assets/github.svg";
-import htmlLogo from "../assets/html.svg";
 import cssLogo from "../assets/css.svg";
+import HtmlLogo from "../assets/html.svg";
 import javaScriptLogo from "../assets/javascript.svg";
 import reactLogo from "../assets/react.svg";
-import tailwindLogo from "../assets/tailwindcss.svg";
-
-// Falta arrumar a largura de cada imagem para que fiquem fixas
+import tailwindLogo from "../assets/Tailwind.svg";
 
 export function Techs() {
   return (
@@ -16,12 +14,16 @@ export function Techs() {
           <span>GitHub</span>
         </li>
         <li className="flex flex-col items-center">
-          <img className="w-10" src={htmlLogo} alt="Html Logotipo" />
+          <img
+            className="w-10 fill-amber-50"
+            src={HtmlLogo}
+            alt="Css Logotipo"
+          />
           <span>Html</span>
         </li>
         <li className="flex flex-col items-center">
           <img className="w-10" src={cssLogo} alt="Css Logotipo" />
-          <span>GitHub</span>
+          <span>Css</span>
         </li>
         <li className="flex flex-col items-center">
           <img
@@ -29,15 +31,15 @@ export function Techs() {
             src={javaScriptLogo}
             alt="Javascript Logotipo"
           />
-          <span>GitHub</span>
+          <span>JavaScript</span>
         </li>
         <li className="flex flex-col items-center">
           <img className="w-10" src={reactLogo} alt="React Logotipo" />
-          <span>GitHub</span>
+          <span>React</span>
         </li>
         <li className="flex flex-col items-center">
           <img className="w-10" src={tailwindLogo} alt="TailwindCSS Logotipo" />
-          <span>GitHub</span>
+          <span>Tailwind CSS</span>
         </li>
       </ul>
     </>
