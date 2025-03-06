@@ -5,43 +5,75 @@ import javaScriptLogo from "../assets/javascript.svg";
 import reactLogo from "../assets/react.svg";
 import tailwindLogo from "../assets/Tailwind.svg";
 
+import { motion } from "framer-motion";
+
 export function Techs() {
   return (
     <>
-      <ul className="flex items-center gap-6">
-        <li className="flex flex-col items-center">
+      <motion.ul className="flex items-center gap-6">
+        <motion.li
+          whileHover={{ scale: 1.2 }}
+          onHoverStart={(e) => {}}
+          onHoverEnd={(e) => {}}
+          className="flex flex-col items-center"
+        >
           <img className="w-10" src={gitHubLogo} alt="Github Logotipo" />
           <span>GitHub</span>
-        </li>
-        <li className="flex flex-col items-center">
+        </motion.li>
+        <motion.li
+          whileHover={{ scale: 1.2 }}
+          onHoverStart={(e) => {}}
+          onHoverEnd={(e) => {}}
+          className="flex flex-col items-center"
+        >
           <img
             className="w-10 fill-amber-50"
             src={HtmlLogo}
             alt="Css Logotipo"
           />
           <span>Html</span>
-        </li>
-        <li className="flex flex-col items-center">
+        </motion.li>
+        <motion.li
+          whileHover={{ scale: 1.2 }}
+          onHoverStart={(e) => {}}
+          onHoverEnd={(e) => {}}
+          className="flex flex-col items-center"
+        >
           <img className="w-10" src={cssLogo} alt="Css Logotipo" />
           <span>Css</span>
-        </li>
-        <li className="flex flex-col items-center">
+        </motion.li>
+        <motion.li
+          whileHover={{ scale: 1.2 }}
+          onHoverStart={(e) => {}}
+          onHoverEnd={(e) => {}}
+          className="flex flex-col items-center"
+        >
           <img
             className="w-10"
             src={javaScriptLogo}
             alt="Javascript Logotipo"
           />
           <span>JavaScript</span>
-        </li>
-        <li className="flex flex-col items-center">
+        </motion.li>
+        <motion.li
+          whileHover={{ scale: 1.2 }}
+          onHoverStart={(e) => {}}
+          onHoverEnd={(e) => {}}
+          className="flex flex-col items-center"
+        >
           <img className="w-10" src={reactLogo} alt="React Logotipo" />
           <span>React</span>
-        </li>
-        <li className="flex flex-col items-center">
+        </motion.li>
+        <motion.li
+          whileHover={{ scale: 1.2 }}
+          onHoverStart={(e) => {}}
+          onHoverEnd={(e) => {}}
+          className="flex flex-col items-center"
+        >
           <img className="w-10" src={tailwindLogo} alt="TailwindCSS Logotipo" />
           <span>Tailwind CSS</span>
-        </li>
-      </ul>
+        </motion.li>
+      </motion.ul>
     </>
   );
 }
