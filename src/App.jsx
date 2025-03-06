@@ -7,7 +7,7 @@ import arrowDown from "./assets/CaretDoubleDown.png";
 import ProjectOne from "./assets/Project-01.png";
 import ProjectTwo from "./assets/Project-02.png";
 import ProjectThree from "./assets/Project-03.png";
-
+import Github from "./assets/GitHub.svg";
 import { motion } from "framer-motion";
 
 const projects = [
@@ -67,6 +67,29 @@ const skills = [
     title: "Desenvolvimento Web",
     description:
       "Desenvolvimento de Sites e Aplicações Web com as melhores tecnologias do mercado.",
+  },
+];
+
+const links = [
+  {
+    title: "GitHub",
+    link: "https://github.com/dzordii",
+    image: Github,
+  },
+  {
+    title: "GitHub",
+    link: "https://github.com/dzordii",
+    image: Github,
+  },
+  {
+    title: "GitHub",
+    link: "https://github.com/dzordii",
+    image: Github,
+  },
+  {
+    title: "GitHub",
+    link: "https://github.com/dzordii",
+    image: Github,
   },
 ];
 
@@ -164,8 +187,15 @@ export default function App() {
                 Entre em contato comigo ou acompanhe minhas redes sociais!
               </span>
             </div>
-            <div>
-              <Links />
+            <div className="flex flex-col gap-6">
+              {links.map((link, index) => (
+                <Links
+                  key={index}
+                  title={link.title}
+                  link={link.link}
+                  image={link.image}
+                />
+              ))}
             </div>
           </div>
         </section>
