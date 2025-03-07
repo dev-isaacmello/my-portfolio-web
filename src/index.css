@@ -2,8 +2,8 @@
 
 @theme {
     --default-font-family: 'Asap', sans-serif;
-    --color-hover: #FFC107;
-    --color-secondary: #FFC107;
+    --color-hover: #c300ff;
+    --color-secondary: #c300ff;
     --color-third: #646464;
     --color-background: #0D0E11;
     --color-text: #E2E4E9;
@@ -15,4 +15,8 @@
     --color-node: #3C873A;
 
     --default-transition-duration: 0.5s;
+}
+
+color {
+    color: #c300ff;
 }

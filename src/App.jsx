@@ -8,6 +8,10 @@ import ProjectOne from "./assets/Project-01.png";
 import ProjectTwo from "./assets/Project-02.png";
 import ProjectThree from "./assets/Project-03.png";
 import Github from "./assets/GitHub.svg";
+import Linkedin from "./assets/Linkedin.svg";
+import Whatsapp from "./assets/Whatsapp.svg";
+import Email from "./assets/email.svg";
+
 import { motion } from "framer-motion";
 
 const projects = [
@@ -77,27 +81,27 @@ const links = [
     image: Github,
   },
   {
-    title: "GitHub",
-    link: "https://github.com/dzordii",
-    image: Github,
+    title: "Linkedin",
+    link: "https://www.linkedin.com/in/isaac-mello-168404281/",
+    image: Linkedin,
   },
   {
-    title: "GitHub",
-    link: "https://github.com/dzordii",
-    image: Github,
+    title: "Whatsapp",
+    link: "https://api.whatsapp.com/send?phone=5551995894049",
+    image: Whatsapp,
   },
   {
-    title: "GitHub",
-    link: "https://github.com/dzordii",
-    image: Github,
+    title: "Email",
+    link: "isaacmello@rede.ulbra.br",
+    image: Email,
   },
 ];
 
-export default function App() {
+export function App() {
   return (
     <>
-      <div className="bg-background text-text">
-        <section className="bg-background text-text flex h-full py-12">
+      <div className="text-text bg-[url(./assets/background.jpg)] bg-cover bg-center bg-no-repeat">
+        <section className="text-text h-screnn flex py-12">
           <div className="container mx-auto flex h-full max-w-300 flex-col items-center justify-center p-6 text-center">
             <img
               className="w-40 rounded-full border-2 border-white"
@@ -109,9 +113,7 @@ export default function App() {
                 Bem vindos ao meu Portfólio Web! Meu nome é{" "}
                 <span className="text-secondary">Isaac Mello</span> e eu sou
               </span>
-              <h1 className="text-6xl font-bold">
-                Desenvolvedor Web Front-end
-              </h1>
+              <h1 className="text-7xl font-bold">Desenvolvedor Web</h1>
               <span className="text-third max-w-200">
                 Crio aplicações funcionais e envolventes que transformam
                 necessidades em soluções reais. Minha paixão pela tecnologia me
@@ -135,13 +137,13 @@ export default function App() {
             </div>
           </div>
         </section>
-        <section className="bg-background text-text flex h-auto py-12">
+        <section className="text-text h-screnn flex py-12">
           <div className="container mx-auto flex h-full max-w-300 flex-col items-center justify-center gap-10 text-center">
-            <div className="mx-auto flex flex-col gap-4 text-center">
-              <h1 className="text-secondary text-6xl font-bold">
-                Meus Projetos
-              </h1>
-              <span className="text-third">Projetos em Destaque</span>
+            <div className="mx-auto flex flex-col gap-2 text-center">
+              <h1 className="text-text">Meus Projetos</h1>
+              <span className="text-secondary text-6xl font-bold">
+                Projetos em Destaque
+              </span>
             </div>
             <div className="grid grid-cols-3 gap-6">
               {projects.map((project, index) => (
@@ -156,13 +158,11 @@ export default function App() {
             </div>
           </div>
         </section>
-        <section className="bg-background text-text flex h-auto py-12">
+        <section className="text-text flex h-full py-12">
           <div className="container mx-auto flex h-full max-w-270 flex-col items-center justify-center gap-10 text-center">
             <div>
-              <h1 className="text-secondary text-6xl font-bold">
-                Meus Diferenciais
-              </h1>
-              <span className="text-third">
+              <h1 className="text-third text-2xl">Meus Diferenciais</h1>
+              <span className="text-text text-4xl font-bold">
                 Como eu posso ajuda no seu negócio.
               </span>
             </div>
@@ -178,11 +178,13 @@ export default function App() {
             </div>
           </div>
         </section>
-        <section className="bg-background text-text flex h-auto py-12">
+        <section className="text-text flex h-screen py-12">
           <div className="container mx-auto flex h-full max-w-300 flex-col items-center justify-center gap-10 text-center">
             <div className="flex flex-col text-center">
-              <span className="text-secondary">Contato</span>
-              <h1 className="text-4xl font-bold">Gostou do meu trabalho?</h1>
+              <span className="text-text">Contato</span>
+              <h1 className="text-secondary text-4xl font-bold">
+                Gostou do meu trabalho?
+              </h1>
               <span className="text-third">
                 Entre em contato comigo ou acompanhe minhas redes sociais!
               </span>

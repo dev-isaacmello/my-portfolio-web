@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 export function ProjectCard({ title, description, image, link }) {
   return (
     <motion.div
-      whileHover={{ scale: 1.06 }}
+      whileHover={{ scale: 1.02 }}
       onHoverStart={(e) => {}}
       onHoverEnd={(e) => {}}
-      className="border-text flex max-w-sm flex-col items-center gap-2 rounded-lg border-1 p-4 shadow-lg"
+      className="border-text flex max-w-sm flex-col items-center gap-2 rounded-4xl border-1 p-4 shadow-lg"
     >
       <img
         src={image}
@@ -17,7 +17,7 @@ export function ProjectCard({ title, description, image, link }) {
         <h2 className="mt-2 text-xl font-bold">{title}</h2>
         <p className="text-text">{description}</p>
       </div>
-      <button className="cursor-pointer rounded border border-blue-500 bg-transparent px-4 py-2 font-semibold text-blue-700 hover:border-transparent hover:bg-blue-500 hover:text-white">
+      <button className="cursor-pointer rounded-4xl border border-text bg-transparent px-4 py-2 font-semibold text-text hover:border-transparent hover:bg-secondary hover:text-white">
         <a href={link} target="_blank">
           Repositório
         </a>

@@ -13,7 +13,7 @@ export function Techs() {
     <>
       <motion.ul className="flex items-center gap-6">
         <motion.li
-          whileHover={{ scale: 1.2 }}
+          whileHover={{ scale: 1.02 }}
           onHoverStart={(e) => {}}
           onHoverEnd={(e) => {}}
           className="flex flex-col items-center"
@@ -22,7 +22,7 @@ export function Techs() {
           <span>GitHub</span>
         </motion.li>
         <motion.li
-          whileHover={{ scale: 1.2 }}
+          whileHover={{ scale: 1.02 }}
           onHoverStart={(e) => {}}
           onHoverEnd={(e) => {}}
           className="flex flex-col items-center"
@@ -35,7 +35,7 @@ export function Techs() {
           <span>Html</span>
         </motion.li>
         <motion.li
-          whileHover={{ scale: 1.2 }}
+          whileHover={{ scale: 1.02 }}
           onHoverStart={(e) => {}}
           onHoverEnd={(e) => {}}
           className="flex flex-col items-center"
@@ -44,7 +44,7 @@ export function Techs() {
           <span>Css</span>
         </motion.li>
         <motion.li
-          whileHover={{ scale: 1.2 }}
+          whileHover={{ scale: 1.02 }}
           onHoverStart={(e) => {}}
           onHoverEnd={(e) => {}}
           className="flex flex-col items-center"
@@ -57,7 +57,7 @@ export function Techs() {
           <span>JavaScript</span>
         </motion.li>
         <motion.li
-          whileHover={{ scale: 1.2 }}
+          whileHover={{ scale: 1.02 }}
           onHoverStart={(e) => {}}
           onHoverEnd={(e) => {}}
           className="flex flex-col items-center"
@@ -70,7 +70,7 @@ export function Techs() {
           <span>Typescript</span>
         </motion.li>
         <motion.li
-          whileHover={{ scale: 1.2 }}
+          whileHover={{ scale: 1.02 }}
           onHoverStart={(e) => {}}
           onHoverEnd={(e) => {}}
           className="flex flex-col items-center"
@@ -79,7 +79,7 @@ export function Techs() {
           <span>React</span>
         </motion.li>
         <motion.li
-          whileHover={{ scale: 1.2 }}
+          whileHover={{ scale: 1.02 }}
           onHoverStart={(e) => {}}
           onHoverEnd={(e) => {}}
           className="flex flex-col items-center"
