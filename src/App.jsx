@@ -11,6 +11,9 @@ import Github from "./assets/GitHub.svg";
 import Linkedin from "./assets/Linkedin.svg";
 import Whatsapp from "./assets/Whatsapp.svg";
 import Email from "./assets/email.svg";
+import Paint from "./assets/paint.svg";
+import Lamp from "./assets/lamp.svg";
+import Project from "./assets/project.svg";
 
 import { motion } from "framer-motion";
 
@@ -55,22 +58,22 @@ const projects = [
 
 const skills = [
   {
-    image: "https://img.icons8.com/color/48/000000/html-5--v1.png",
-    title: "Desenvolvimento Web",
+    image: Lamp,
+    title: "Aprendizado Contínuo e Compartilhamento",
     description:
-      "Desenvolvimento de Sites e Aplicações Web com as melhores tecnologias do mercado.",
+      "Sou apaixonado por tecnologia e estou sempre buscando aprender e evoluir. Pretendo compartilhar meus conhecimentos por meio de tutoriais e desafios resolvidos, pois acredito que ensinar também é uma forma poderosa de aprendizado.",
   },
   {
-    image: "https://img.icons8.com/color/48/000000/html-5--v1.png",
-    title: "Desenvolvimento Web",
+    image: Project,
+    title: "Projetos Práticos e Criativos",
     description:
-      "Desenvolvimento de Sites e Aplicações Web com as melhores tecnologias do mercado.",
+      "Minha abordagem vai além da teoria: desenvolvo projetos que resolvem problemas reais e agregam valor. Utilizo tecnologias como React, TypeScript e Python para criar aplicações interativas, sempre priorizando boas práticas de código.",
   },
   {
-    image: "https://img.icons8.com/color/48/000000/html-5--v1.png",
-    title: "Desenvolvimento Web",
+    image: Paint,
+    title: "Design Moderno e Experiência Fluida",
     description:
-      "Desenvolvimento de Sites e Aplicações Web com as melhores tecnologias do mercado.",
+      "Acredito que um bom design faz toda a diferença. Utilizo Tailwind CSS para criar interfaces modernas e responsivas, focando na experiência do usuário e na performance para garantir aplicações rápidas e eficientes.",
   },
 ];
 
@@ -91,8 +94,7 @@ const links = [
     image: Whatsapp,
   },
   {
-    title: "Email",
-    link: "isaacmello@rede.ulbra.br",
+    title: "isaacmello@rede.ulbra.br",
     image: Email,
   },
 ];

@@ -1,9 +1,9 @@
 export function Skills({ image, title, description }) {
   return (
-    <div className="bg-background text-text border-text flex flex-col items-start rounded-xl border-1 p-6">
-      <img src={image} />
-      <h1 className="text-secondary text-2xl">{title}</h1>
-      <span className="text-start text-xs text-gray-500">{description}</span>
+    <div className="border-text text-text flex flex-col items-start gap-2 rounded-4xl border-1 p-6">
+      <img className="w-8" src={image} />
+      <h1 className="text-secondary text-start text-2xl font-bold">{title}</h1>
+      <span className="text-start text-xs text-text">{description}</span>
     </div>
   );
 }

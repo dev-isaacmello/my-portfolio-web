@@ -17,7 +17,7 @@ export function ProjectCard({ title, description, image, link }) {
         <h2 className="mt-2 text-xl font-bold">{title}</h2>
         <p className="text-text">{description}</p>
       </div>
-      <button className="cursor-pointer rounded-4xl border border-text bg-transparent px-4 py-2 font-semibold text-text hover:border-transparent hover:bg-secondary hover:text-white">
+      <button className="border-text text-text hover:bg-secondary cursor-pointer rounded-4xl border bg-transparent px-4 py-2 font-semibold hover:border-transparent hover:text-white">
         <a href={link} target="_blank">
           Repositório
         </a>

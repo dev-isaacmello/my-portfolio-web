@@ -8,9 +8,9 @@ export function Links({ title, link, image }) {
         whileHover={{ scale: 1.02 }}
         onHoverStart={(e) => {}}
         onHoverEnd={(e) => {}}
-        className="bg-background text-text border-text flex w-100 items-center gap-4 rounded-full border-1 p-4"
-        href="#"
-        onClick={() => window.open(link)}
+        className="text-text border-text flex w-100 items-center gap-4 rounded-full border-1 p-4"
+        href={link}
+        target="_self"
       >
         <img className="w-8" src={image} />
         <span>{title}</span>
