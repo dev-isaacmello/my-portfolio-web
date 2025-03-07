@@ -19,41 +19,26 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Travelgram",
-    description: "Aplicativo de Viagens",
+    title: "Nada por Aqui Ainda",
+    description: "NaN",
     image: ProjectOne,
     link: "http://github.com/dzordii",
+    techs: "Nada por Aqui Ainda",
   },
   {
-    title: "App de Música",
-    description: "Site de Música com Player Integrado",
-    image: ProjectTwo,
-    link: "http://github.com/dzordii",
-  },
-  {
-    title: "Site de Barbearia",
-    description: "Site de Barbearia com Agendamento Online",
-    image: ProjectThree,
-    link: "http://github.com/dzordii",
-  },
-  {
-    title: "Travelgram",
-    description: "Aplicativo de Viagens",
+    title: "Nada por Aqui Ainda",
+    description: "NaN",
     image: ProjectOne,
-    link: "#",
+    link: "http://github.com/dzordii",
+    techs: "Nada por Aqui Ainda",
   },
   {
-    title: "App de Música",
-    description: "Site de Música com Player Integrado",
-    image: ProjectTwo,
-    link: "#",
-  },
-  {
-    title: "App de Música",
-    description: "Site de Música com Player Integrado",
-    image: ProjectTwo,
-    link: "#",
-  },
+    title: "Nada por Aqui Ainda",
+    description: "NaN",
+    image: ProjectOne,
+    link: "http://github.com/dzordii",
+    techs: "Nada por Aqui Ainda",
+  }
 ];
 
 const skills = [
@@ -155,6 +140,7 @@ export function App() {
                   description={project.description}
                   image={project.image}
                   link={project.link}
+                  techs={project.techs}
                 />
               ))}
             </div>

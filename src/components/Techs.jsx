@@ -5,6 +5,7 @@ import javaScriptLogo from "../assets/javascript.svg";
 import reactLogo from "../assets/react.svg";
 import tailwindLogo from "../assets/Tailwind.svg";
 import typeScriptLogo from "../assets/typescript.svg";
+import pythonLogo from "../assets/py.svg";
 
 import { motion } from "framer-motion";
 
@@ -13,18 +14,14 @@ export function Techs() {
     <>
       <motion.ul className="flex items-center gap-6">
         <motion.li
-          whileHover={{ scale: 1.02 }}
-          onHoverStart={(e) => {}}
-          onHoverEnd={(e) => {}}
+          whileHover={{ scale: 1.2}}
           className="flex flex-col items-center"
         >
           <img className="w-10" src={gitHubLogo} alt="Github Logotipo" />
           <span>GitHub</span>
         </motion.li>
         <motion.li
-          whileHover={{ scale: 1.02 }}
-          onHoverStart={(e) => {}}
-          onHoverEnd={(e) => {}}
+          whileHover={{ scale: 1.2 }}
           className="flex flex-col items-center"
         >
           <img
@@ -35,18 +32,14 @@ export function Techs() {
           <span>Html</span>
         </motion.li>
         <motion.li
-          whileHover={{ scale: 1.02 }}
-          onHoverStart={(e) => {}}
-          onHoverEnd={(e) => {}}
+          whileHover={{ scale: 1.2 }}
           className="flex flex-col items-center"
         >
           <img className="w-10" src={cssLogo} alt="Css Logotipo" />
           <span>Css</span>
         </motion.li>
         <motion.li
-          whileHover={{ scale: 1.02 }}
-          onHoverStart={(e) => {}}
-          onHoverEnd={(e) => {}}
+          whileHover={{ scale: 1.2 }}
           className="flex flex-col items-center"
         >
           <img
@@ -57,9 +50,7 @@ export function Techs() {
           <span>JavaScript</span>
         </motion.li>
         <motion.li
-          whileHover={{ scale: 1.02 }}
-          onHoverStart={(e) => {}}
-          onHoverEnd={(e) => {}}
+          whileHover={{ scale: 1.2 }}
           className="flex flex-col items-center"
         >
           <img
@@ -70,22 +61,25 @@ export function Techs() {
           <span>Typescript</span>
         </motion.li>
         <motion.li
-          whileHover={{ scale: 1.02 }}
-          onHoverStart={(e) => {}}
-          onHoverEnd={(e) => {}}
+          whileHover={{ scale: 1.2 }}
           className="flex flex-col items-center"
         >
           <img className="w-10" src={reactLogo} alt="React Logotipo" />
           <span>React</span>
         </motion.li>
         <motion.li
-          whileHover={{ scale: 1.02 }}
-          onHoverStart={(e) => {}}
-          onHoverEnd={(e) => {}}
+          whileHover={{ scale: 1.2 }}
           className="flex flex-col items-center"
         >
           <img className="w-10" src={tailwindLogo} alt="TailwindCSS Logotipo" />
           <span>Tailwind CSS</span>
+        </motion.li>
+        <motion.li
+          whileHover={{ scale: 1.2 }}
+          className="flex flex-col items-center"
+        >
+          <img className="w-10" src={pythonLogo} alt="Python Logotipo" />
+          <span>Python</span>
         </motion.li>
       </motion.ul>
     </>

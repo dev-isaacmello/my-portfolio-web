@@ -6,8 +6,6 @@ export function Links({ title, link, image }) {
     <>
       <motion.a
         whileHover={{ scale: 1.02 }}
-        onHoverStart={(e) => {}}
-        onHoverEnd={(e) => {}}
         className="text-text border-text flex w-100 items-center gap-4 rounded-full border-1 p-4"
         href={link}
         target="_self"
