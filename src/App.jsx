@@ -92,7 +92,7 @@ export function App() {
   return (
     <>
       <div className="text-text overflow-hidden bg-[url(./assets/background.jpg)] bg-cover bg-center bg-no-repeat">
-        <section className="text-text flex h-screen px-12 py-24">
+        <section className="text-text flex h-full px-12 py-12">
           <div className="container mx-auto flex h-full max-w-300 flex-col items-center justify-center p-6 text-center">
             <img
               className="w-40 rounded-full border-2 border-white"
@@ -129,7 +129,7 @@ export function App() {
             </div>
           </div>
         </section>
-        <section className="text-text flex h-full px-12 py-24">
+        <section className="text-text flex h-full px-12 py-12">
           <div className="container mx-auto flex max-w-300 flex-col items-center justify-center gap-10 text-center">
             <div className="mx-auto flex flex-col gap-2 text-center">
               <h1 className="text-third">Meus Projetos</h1>
@@ -152,7 +152,7 @@ export function App() {
             </div>
           </div>
         </section>
-        <section className="text-text flex h-full px-12 py-24">
+        <section className="text-text flex h-full px-12 py-12">
           <div className="container mx-auto flex h-full max-w-300 flex-col items-center justify-center gap-10 text-center">
             <div className="px=6">
               <h1 className="text-third text-2xl">Meus Diferenciais</h1>
@@ -172,7 +172,7 @@ export function App() {
             </div>
           </div>
         </section>
-        <section className="text-text flex h-full px-12 py-24">
+        <section className="text-text flex h-full px-12 py-12">
           <div className="container mx-auto flex h-full max-w-300 flex-col items-center justify-center gap-10 text-center">
             <div className="flex flex-col text-center">
               <span className="text-third">Contato</span>
