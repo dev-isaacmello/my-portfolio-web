@@ -1,4 +1,4 @@
-import GitHub from "../assets/Github.svg";
+const GitHub = new URL("../assets/Github.svg", import.meta.url).href;
 import cssLogo from "../assets/CSS.svg";
 import HtmlLogo from "../assets/HTML.svg";
 import javaScriptLogo from "../assets/JavaScript.svg";
