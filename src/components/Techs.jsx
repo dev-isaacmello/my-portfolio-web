@@ -12,9 +12,9 @@ import { motion } from "framer-motion";
 export function Techs() {
   return (
     <>
-      <motion.ul className="flex items-center gap-6 flex-wrap justify-center">
+      <motion.ul className="flex flex-wrap items-center justify-center gap-6">
         <motion.li
-          whileHover={{ scale: 1.2}}
+          whileHover={{ scale: 1.2 }}
           className="flex flex-col items-center"
         >
           <img className="w-10" src={gitHubLogo} alt="Github Logotipo" />

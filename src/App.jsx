@@ -92,7 +92,7 @@ export function App() {
   return (
     <>
       <div className="text-text overflow-hidden bg-[url(./assets/background.jpg)] bg-cover bg-center bg-no-repeat">
-        <section className="text-text h-screen flex px-12 py-24">
+        <section className="text-text flex h-screen px-12 py-24">
           <div className="container mx-auto flex h-full max-w-300 flex-col items-center justify-center p-6 text-center">
             <img
               className="w-40 rounded-full border-2 border-white"
@@ -125,12 +125,11 @@ export function App() {
                 whileHover={{ scale: 1.2 }}
                 onHoverStart={(e) => {}}
                 onHoverEnd={(e) => {}}
-              >
-              </motion.button>
+              ></motion.button>
             </div>
           </div>
         </section>
-        <section className="text-text h-full flex px-12 py-24">
+        <section className="text-text flex h-full px-12 py-24">
           <div className="container mx-auto flex max-w-300 flex-col items-center justify-center gap-10 text-center">
             <div className="mx-auto flex flex-col gap-2 text-center">
               <h1 className="text-third">Meus Projetos</h1>
@@ -157,7 +156,7 @@ export function App() {
           <div className="container mx-auto flex h-full max-w-300 flex-col items-center justify-center gap-10 text-center">
             <div className="px=6">
               <h1 className="text-third text-2xl">Meus Diferenciais</h1>
-              <span className="text-secondary md:text-4xl text-2xl font-bold">
+              <span className="text-secondary text-2xl font-bold md:text-4xl">
                 Como eu posso ajuda no seu negócio
               </span>
             </div>
