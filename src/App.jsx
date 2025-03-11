@@ -157,7 +157,7 @@ export function App() {
             <div className="px=6">
               <h1 className="text-third text-2xl">Meus Diferenciais</h1>
               <span className="text-secondary text-2xl font-bold md:text-4xl">
-                Como eu posso ajuda no seu negócio
+                Como eu posso ajudar no seu negócio
               </span>
             </div>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
