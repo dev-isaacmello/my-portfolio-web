@@ -1,6 +1,6 @@
-import gitHubLogo from "../assets/GitHub.svg";
 import cssLogo from "../assets/css.svg";
 import HtmlLogo from "../assets/html.svg";
+import GitHub from "../assets/github.svg";
 import javaScriptLogo from "../assets/javascript.svg";
 import reactLogo from "../assets/react.svg";
 import tailwindLogo from "../assets/Tailwind.svg";
@@ -17,7 +17,7 @@ export function Techs() {
           whileHover={{ scale: 1.2 }}
           className="flex flex-col items-center"
         >
-          <img className="w-10" src={gitHubLogo} alt="Github Logotipo" />
+          <img className="w-10" src={GitHub} alt="Github Logotipo" />
           <span>GitHub</span>
         </motion.li>
         <motion.li
