@@ -1,10 +1,10 @@
-import cssLogo from "../assets/css.svg";
-import HtmlLogo from "../assets/html.svg";
+import cssLogo from "../assets/CSS.svg";
+import HtmlLogo from "../assets/HTML.svg";
 import GitHub from "../assets/github.svg";
-import javaScriptLogo from "../assets/javascript.svg";
-import reactLogo from "../assets/react.svg";
+import javaScriptLogo from "../assets/JavaScript.svg";
+import reactLogo from "../assets/React.svg";
 import tailwindLogo from "../assets/Tailwind.svg";
-import typeScriptLogo from "../assets/typescript.svg";
+import typeScriptLogo from "../assets/Typescript.svg";
 import pythonLogo from "../assets/py.svg";
 
 import { motion } from "framer-motion";
