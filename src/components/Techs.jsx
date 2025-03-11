@@ -1,4 +1,4 @@
-import GitHub from "../assets/Github.svg";
+import gitHub from "../assets/logogithub.svg";
 import cssLogo from "../assets/CSS.svg";
 import HtmlLogo from "../assets/HTML.svg";
 import javaScriptLogo from "../assets/JavaScript.svg";
@@ -17,7 +17,7 @@ export function Techs() {
           whileHover={{ scale: 1.2 }}
           className="flex flex-col items-center"
         >
-          <img className="w-10" src={GitHub} alt="Github Logotipo" />
+          <img className="w-10" src={gitHub} alt="Github Logotipo" />
           <span>GitHub</span>
         </motion.li>
         <motion.li

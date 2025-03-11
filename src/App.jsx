@@ -6,7 +6,7 @@ import perfilImg from "./assets/perfil.png";
 import ProjectOne from "./assets/Project-01.png";
 import ProjectTwo from "./assets/Project-02.png";
 import ProjectThree from "./assets/Project-03.png";
-import Github from "./assets/GitHub.svg";
+import Github from "./assets/logogithub.svg";
 import Linkedin from "./assets/Linkedin.svg";
 import Whatsapp from "./assets/Whatsapp.svg";
 import Email from "./assets/email.svg";
