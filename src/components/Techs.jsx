@@ -1,6 +1,6 @@
+import GitHub from "../assets/Github.svg";
 import cssLogo from "../assets/CSS.svg";
 import HtmlLogo from "../assets/HTML.svg";
-import GitHub from "../assets/Github.svg";
 import javaScriptLogo from "../assets/JavaScript.svg";
 import reactLogo from "../assets/React.svg";
 import tailwindLogo from "../assets/Tailwind.svg";
