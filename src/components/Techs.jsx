@@ -1,4 +1,4 @@
-import gitHubLogo from "../assets/github.svg";
+import gitHubLogo from "../assets/GitHub.svg";
 import cssLogo from "../assets/css.svg";
 import HtmlLogo from "../assets/html.svg";
 import javaScriptLogo from "../assets/javascript.svg";
