@@ -25,7 +25,7 @@ Bem-vindo ao repositório do meu portfólio! 🚀 Desenvolvido com as mais moder
 
 2. Entre na pasta do projeto:
    ```sh
-   cd portfolio
+   cd my-portfolio-web
    ```
 
 3. Instale as dependências:
