@@ -1,6 +1,13 @@
 import { motion } from "framer-motion";
 
-export function ProjectCard({ title, description, image, link, techs, action }) {
+export function ProjectCard({
+  title,
+  description,
+  image,
+  link,
+  techs,
+  action,
+}) {
   return (
     <motion.div
       whileHover={{ scale: 1.02 }}
@@ -11,12 +18,12 @@ export function ProjectCard({ title, description, image, link, techs, action }) 
         alt={title}
         className="h-40 w-full rounded-2xl object-cover"
       />
-      <div>
+      <div className="flex flex-col gap-4">
         <h2 className="mt-2 text-xl font-bold">{title}</h2>
-        <p className="text-text">{description}</p>
-        <span className="font-bold text-secondary">{techs}</span>
+        <p className="text-third font-sans">{description}</p>
+        <span className="text-secondary font-bold">{techs}</span>
       </div>
-      <button className="border-text text-text hover:bg-secondary cursor-pointer rounded-4xl border bg-transparent px-4 py-2 font-semibold hover:border-transparent transition-colors hover:text-white">
+      <button className="border-text text-text hover:bg-secondary mt-auto cursor-pointer rounded-4xl border bg-transparent px-4 py-2 font-semibold transition-colors hover:border-transparent hover:text-white">
         <a href={link} target="_blank">
           {action}
         </a>

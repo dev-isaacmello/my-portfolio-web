@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 export function Techs() {
   return (
     <>
-      <motion.ul className="flex items-center gap-6">
+      <motion.ul className="flex items-center gap-6 flex-wrap justify-center">
         <motion.li
           whileHover={{ scale: 1.2}}
           className="flex flex-col items-center"
