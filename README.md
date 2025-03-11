@@ -14,13 +14,13 @@ Bem-vindo ao repositório do meu portfólio! 🚀 Desenvolvido com as mais moder
 - 📄 **Seção Sobre Mim** - Um resumo profissional e pessoal
 - 💼 **Projetos** - Exibição dos meus principais trabalhos
 - ✉️ **Contato** - Formulário para entrar em contato facilmente
-- 🌙 **Modo Escuro** - Alternância entre temas claro e escuro
+
 
 ## 📦 Como Rodar o Projeto
 
 1. Clone o repositório:
    ```sh
-   git clone https://github.com/seu-usuario/portfolio.git
+   git clone https://github.com/dzordii/my-portfolio-web.git
    ```
 
 2. Entre na pasta do projeto:
@@ -50,6 +50,7 @@ Este projeto pode ser facilmente implantado em plataformas como:
 - 🔗 Integração com API de Blogs/Posts
 - 📊 Seção interativa de habilidades
 - 🌍 Tradução para outros idiomas
+- 🌙 Modo Escuro - Alternância entre temas claro e escuro
 
 ## 🤝 Contribuição
 
