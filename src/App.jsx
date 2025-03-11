@@ -19,26 +19,31 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Nada por Aqui Ainda",
-    description: "NaN",
+    title: "Travelgram Perfil de Viagens",
+    description:
+      "Um dos meus primeiros projetos desenvolvidos, sem funcionalidades, apenas o layout utilizando HTML, CSS e Javascript para realizar animações.",
     image: ProjectOne,
-    link: "http://github.com/dzordii",
-    techs: "Nada por Aqui Ainda",
+    link: "https://github.com/dzordii/travelgram-project.git",
+    action: "Ver Repositório",
+    techs: "HTML, CSS & Javascript",
   },
   {
-    title: "Nada por Aqui Ainda",
-    description: "NaN",
-    image: ProjectOne,
-    link: "http://github.com/dzordii",
-    techs: "Nada por Aqui Ainda",
+    title: "Website de Barbearia",
+    description:
+      "Projeto real para uma barbearia, utilizando HTML, CSS e Javascript para realizar animações e interações com o usuário.",
+    image: ProjectTwo,
+    link: "https://barbeariaurbancut.com.br/",
+    action: "Ver Website",
+    techs: "Html, CSS & Javascript",
   },
   {
-    title: "Nada por Aqui Ainda",
-    description: "NaN",
-    image: ProjectOne,
-    link: "http://github.com/dzordii",
-    techs: "Nada por Aqui Ainda",
-  }
+    title: "Este Portfólio",
+    description: "Portfólio sobre mim, com projetos e informações pessoais.",
+    image: ProjectThree,
+    link: "https://github.com/dzordii/my-portfolio-web",
+    action: "Ver Repositório",
+    techs: "React, Tailwind CSS & Framer Motion",
+  },
 ];
 
 const skills = [
@@ -140,6 +145,7 @@ export function App() {
                   description={project.description}
                   image={project.image}
                   link={project.link}
+                  action={project.action}
                   techs={project.techs}
                 />
               ))}

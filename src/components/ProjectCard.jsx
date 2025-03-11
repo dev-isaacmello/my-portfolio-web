@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export function ProjectCard({ title, description, image, link, techs }) {
+export function ProjectCard({ title, description, image, link, techs, action }) {
   return (
     <motion.div
       whileHover={{ scale: 1.02 }}
@@ -18,7 +18,7 @@ export function ProjectCard({ title, description, image, link, techs }) {
       </div>
       <button className="border-text text-text hover:bg-secondary cursor-pointer rounded-4xl border bg-transparent px-4 py-2 font-semibold hover:border-transparent transition-colors hover:text-white">
         <a href={link} target="_blank">
-          Repositório
+          {action}
         </a>
       </button>
     </motion.div>
