@@ -6,6 +6,7 @@ import perfilImg from "./assets/perfil.png";
 import ProjectOne from "./assets/Project-01.png";
 import ProjectTwo from "./assets/Project-02.png";
 import ProjectThree from "./assets/Project-03.png";
+import ProjectFourth from "./assets/Project-04.png";
 import Github from "./assets/logogithub.svg";
 import Linkedin from "./assets/Linkedin.svg";
 import Whatsapp from "./assets/Whatsapp.svg";
@@ -42,6 +43,15 @@ const projects = [
     link: "https://github.com/dzordii/my-portfolio-web",
     action: "Ver Repositório",
     techs: "React, Tailwind CSS & Framer Motion",
+  },
+  {
+    title: "Website de Pet Shop",
+    description: "Projeto ficticio de um Pet Shop, utilizando AOS para realizar animações e interações com o usuário.",
+    image: ProjectFourth,
+    link: "https://github.com/dzordii/petdev.git",
+    action: "Ver Repositório",
+    actionSite: "Ver Website",
+    techs: "Nextjs, Typescript, Tailwind CSS & AOS",
   },
 ];
 
@@ -146,6 +156,7 @@ export function App() {
                   image={project.image}
                   link={project.link}
                   action={project.action}
+                  actionSite={project.actionSite}
                   techs={project.techs}
                 />
               ))}
