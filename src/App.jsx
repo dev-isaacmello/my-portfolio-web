@@ -50,7 +50,6 @@ const projects = [
     image: ProjectFourth,
     link: "https://github.com/dzordii/petdev.git",
     action: "Ver Repositório",
-    actionSite: "Ver Website",
     techs: "Nextjs, Typescript, Tailwind CSS & AOS",
   },
 ];
@@ -156,7 +155,6 @@ export function App() {
                   image={project.image}
                   link={project.link}
                   action={project.action}
-                  actionSite={project.actionSite}
                   techs={project.techs}
                 />
               ))}

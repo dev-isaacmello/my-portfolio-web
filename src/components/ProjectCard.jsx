@@ -5,10 +5,8 @@ export function ProjectCard({
   description,
   image,
   link,
-  linkSite,
   techs,
   action,
-  actionSite,
 }) {
   return (
     <motion.div
