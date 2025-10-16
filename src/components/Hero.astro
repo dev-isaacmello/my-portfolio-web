@@ -6,7 +6,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const technologies = [
-  { name: 'C#', icon: 'simple-icons:csharp', color: '#8b5cf6' },
+  { name: 'C#', icon: 'simple-icons:csharp', color: '#A020F0' },
   { name: 'Python', icon: 'logos:python', color: '#eab308' },
   { name: 'Java', icon: 'logos:java', color: '#ef4444' },
   { name: 'Flutter', icon: 'logos:flutter', color: '#06b6d4' },
@@ -103,7 +103,7 @@ const technologies = [
                     <div class="tech-icon group/tech cursor-pointer">
                       <div class="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 overflow-hidden">
                         <div class="absolute inset-0 rounded-full blur-sm opacity-0 group-hover/tech:opacity-50 transition-opacity duration-300" style={`background: radial-gradient(circle at center, ${tech.color} 0%, ${tech.color}40 50%, transparent 80%);`}></div>
-                        <div class="relative w-full h-full tech-container rounded-full flex items-center justify-center border border-white/40 group-hover/tech:border-white/70 transition-all duration-300">
+                        <div class="relative w-full h-full rounded-full flex items-center justify-center border dark:border-white/40 transition-all duration-300">
                           <Icon 
                             name={tech.icon} 
                             class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-9 lg:h-9"
@@ -174,30 +174,6 @@ const technologies = [
     to {
       transform: rotate(360deg);
     }
-  }
-
-  /* Container específico para techs - sem background no modo light */
-  .tech-container {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 
-      0 8px 32px rgba(0, 0, 0, 0.1),
-      inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  }
-
-  .light .tech-container {
-    background: transparent;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    box-shadow: none;
-  }
-
-  /* Gradiente radial para brilho circular */
-  .bg-gradient-radial {
-    background: radial-gradient(circle, var(--tw-gradient-stops));
   }
 
   @media (max-width: 640px) {
