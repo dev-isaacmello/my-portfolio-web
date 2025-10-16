@@ -55,7 +55,6 @@ export const ui = {
     'contact.whatsapp': 'Whatsapp',
     'contact.email': 'isaacmello@rede.ulbra.br',
     'footer.rights': 'Isaac Mello - 2025',
-    'footer.rightsDescription': '© Todos os direitos reservados',
     'techStack.title': 'Stack Tecnológico',
   },
   en: {

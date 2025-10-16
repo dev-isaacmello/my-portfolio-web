@@ -69,13 +69,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .light .glassmorphism-clean {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    0 8px 32px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 @keyframes float-clean {
@@ -98,14 +98,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
 
 .stars,
 .stars2,
@@ -114,50 +106,58 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 200%;
   background: transparent;
 }
 
 .dark .stars {
   background-image: 
-    radial-gradient(1px 1px at 20px 30px, #eee, rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 60px 70px, #fff, rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 50px 50px, #ddd, rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 130px 80px, #fff, rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 90px 10px, #eee, rgba(0,0,0,0));
+    radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 60px 70px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 50px 50px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 90px 10px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 180px 120px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 40px 160px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 110px 140px, #ffffff, rgba(0,0,0,0));
   background-repeat: repeat;
   background-size: 200px 200px;
-  animation: space 200s linear infinite;
-  opacity: 0.2;
+  animation: stars-move 100s linear infinite;
+  opacity: 0.8;
 }
 
 .dark .stars2 {
   background-image: 
-    radial-gradient(1px 1px at 100px 150px, #fff, rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 200px 250px, #ddd, rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 50px 100px, #eee, rgba(0,0,0,0));
+    radial-gradient(1px 1px at 100px 150px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 200px 250px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 50px 100px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 150px 50px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 250px 180px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 80px 220px, #ffffff, rgba(0,0,0,0));
   background-repeat: repeat;
   background-size: 300px 300px;
-  animation: space 300s linear infinite;
-  opacity: 0.1;
+  animation: stars-move 150s linear infinite;
+  opacity: 0.6;
 }
 
 .dark .stars3 {
   background-image: 
-    radial-gradient(1px 1px at 300px 200px, #fff, rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 400px 400px, #ddd, rgba(0,0,0,0));
+    radial-gradient(3px 3px at 300px 200px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 400px 400px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(3px 3px at 100px 300px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 250px 150px, #ffffff, rgba(0,0,0,0));
   background-repeat: repeat;
   background-size: 500px 500px;
-  animation: space 400s linear infinite;
-  opacity: 0.05;
+  animation: stars-move 200s linear infinite;
+  opacity: 0.9;
 }
 
-@keyframes space {
-  from {
+@keyframes stars-move {
+  0% {
     transform: translateY(0);
   }
-  to {
-    transform: translateY(-2000px);
+  100% {
+    transform: translateY(-50%);
   }
 }
 
@@ -166,7 +166,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .light .glow-text-clean {
-  text-shadow: 0 2px 4px rgba(99, 102, 241, 0.1);
+  text-shadow: 0 2px 4px rgba(99, 102, 241, 0.3);
+  color: #1e293b;
 }
 
 .btn-clean {
@@ -279,9 +280,19 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
+.light .text-contrast {
+  color: #1e293b;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
 .card-clean:hover .text-contrast {
   color: #ffffff;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.light .card-clean:hover .text-contrast {
+  color: #0f172a;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .animate-float-clean {
@@ -290,4 +301,58 @@ h1, h2, h3, h4, h5, h6 {
 
 .animate-glow-subtle {
   animation: glow-subtle 4s ease-in-out infinite;
+}
+
+/* Light Mode Contrast Fixes */
+.light {
+  color: #1e293b;
+}
+
+.light .text-slate-200,
+.light .text-slate-300,
+.light .text-slate-400 {
+  color: #475569;
+}
+
+.light .text-slate-100 {
+  color: #334155;
+}
+
+.light .border-indigo-500\/30 {
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+.light .hover\:border-indigo-400\/50:hover {
+  border-color: rgba(99, 102, 241, 0.6);
+}
+
+.light .bg-slate-900\/50 {
+  background-color: rgba(248, 250, 252, 0.8);
+}
+
+.light .border-indigo-500\/20 {
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.light .hover\:border-indigo-400\/40:hover {
+  border-color: rgba(99, 102, 241, 0.5);
+}
+
+/* Contact Section Light Mode Fixes */
+.light .contact-link img {
+  filter: brightness(0.3) saturate(1.2);
+}
+
+.light .contact-link:hover img {
+  filter: brightness(0.2) saturate(1.5);
+}
+
+.light .contact-link .glassmorphism-clean {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.light .contact-link:hover .glassmorphism-clean {
+  border-color: rgba(99, 102, 241, 0.5);
+  background: rgba(255, 255, 255, 1);
 }
