@@ -13,8 +13,8 @@ const { title, description, icon } = Astro.props;
   
   <div class="flex flex-col items-start space-y-4 sm:space-y-6 h-full">
     <div class="relative">
-      <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
-      <div class="relative glassmorphism-clean rounded-2xl p-3 sm:p-4 border border-purple-500/30 transform group-hover:rotate-3 transition-transform duration-300 hover:border-purple-400/50">
+      <div class="absolute inset-0 bg-gradient-to-br from-white to-white rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+      <div class="relative glassmorphism-clean rounded-2xl p-3 sm:p-4 border border-white/30 transform group-hover:rotate-3 transition-transform duration-300 hover:border-white/50">
         <img 
           src={icon} 
           alt={title}
@@ -24,7 +24,7 @@ const { title, description, icon } = Astro.props;
     </div>
 
     <div class="space-y-3 sm:space-y-4 flex-grow">
-      <h3 class="text-lg sm:text-xl lg:text-2xl font-bold font-display text-contrast group-hover:text-white transition-colors duration-300 leading-tight">
+      <h3 class="text-lg sm:text-xl lg:text-2xl font-bold font-display text-contrast dark:group-hover:text-white transition-colors duration-300 leading-tight">
         {title}
       </h3>
 
@@ -33,7 +33,7 @@ const { title, description, icon } = Astro.props;
       </p>
     </div>
 
-    <div class="w-full h-1 bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 rounded-full opacity-50 group-hover:opacity-100 transition-opacity duration-300 relative overflow-hidden">
+    <div class="w-full h-1 bg-gradient-to-r from-white via-white to-white rounded-full opacity-50 group-hover:opacity-100 transition-opacity duration-300 relative overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
     </div>
   </div>

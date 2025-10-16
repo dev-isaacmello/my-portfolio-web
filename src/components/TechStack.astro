@@ -28,7 +28,7 @@ const technologies = [
   <div class="">
     <div class="text-center mb-6 sm:mb-8">
       <h3 class="text-lg sm:text-xl font-semibold text-slate-200 mb-3 glow-text-clean">{t('techStack.title')}</h3>
-      <div class="w-16 sm:w-20 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full"></div>
+      <div class="w-16 sm:w-20 h-1 bg-gradient-to-r from-white to-white mx-auto rounded-full"></div>
     </div>
     
     <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 gap-4 sm:gap-6">
@@ -38,17 +38,14 @@ const technologies = [
           style={`animation-delay: ${index * 0.3}s`}
         >
           <div class="relative">
-            <div class={`absolute inset-0 bg-gradient-to-br ${tech.color} rounded-2xl blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-300`}></div>
-            <div class="relative glassmorphism-clean rounded-2xl p-3 sm:p-4 border border-indigo-500/30 transform group-hover:rotate-3 transition-all duration-300 hover:border-indigo-400/50">
+            <div class={`absolute inset-0 bg-gradient-to-br ${tech.color} rounded-full blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-300`}></div>
+            <div class="relative glassmorphism-clean rounded-full p-10 sm:p-2 border border-white/30 transform group-hover:rotate-3 transition-all duration-300 hover:border-white/50">
               <Icon 
                 name={tech.icon} 
                 class="w-8 h-8 sm:w-10 sm:h-10"
-              />
+              /> 
             </div>
           </div>
-          <span class="text-xs sm:text-sm text-slate-300 group-hover:text-indigo-400 transition-colors font-medium text-center leading-tight">
-            {tech.name}
-          </span>
         </div>
       ))}
     </div>
