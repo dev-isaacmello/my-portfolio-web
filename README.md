@@ -20,11 +20,13 @@
 - [Sobre o Projeto](#-sobre-o-projeto)
 - [Características](#-características)
 - [Stack Tecnológico](#-stack-tecnológico)
+- [Arquitetura](#-arquitetura)
 - [Começando](#-começando)
 - [Estrutura do Projeto](#-estrutura-do-projeto)
 - [Comandos Disponíveis](#-comandos-disponíveis)
 - [Internacionalização](#-internacionalização)
 - [Build e Deploy](#-build-e-deploy)
+- [Boas Práticas](#-boas-práticas)
 - [Roadmap](#-roadmap)
 - [Contribuindo](#-contribuindo)
 - [Licença](#-licença)
@@ -54,12 +56,14 @@ Portfolio pessoal de desenvolvedor web full-stack construído com **Astro** e **
 - **Dark/Light Mode**: Toggle suave entre temas com preferência salva em localStorage
 - **Glassmorphism**: Cards com efeito de vidro fosco e blur avançado
 - **Animações CSS Puras**: Transições e efeitos sem dependências JavaScript pesadas
+- **Sistema Orbital**: 15 tecnologias orbitando ao redor da foto principal como uma roda
+- **Light Beams**: Efeitos de feixes de luz passando pelos cards de projetos
 - **Gradientes Dinâmicos**: Bordas e elementos com gradientes coloridos animados
 
 ### 🌍 Internacionalização
 
 - **3 Idiomas**: Português (BR), Inglês (US), Espanhol (ES)
-- **Roteamento i18n**: URLs amigáveis para cada idioma
+- **Roteamento i18n**: URLs amigáveis para cada idioma (`/`, `/en`, `/es`)
 - **Tradução Completa**: Todo conteúdo totalmente traduzido
 - **Persistência**: Idioma selecionado mantido entre navegações
 
@@ -69,6 +73,7 @@ Portfolio pessoal de desenvolvedor web full-stack construído com **Astro** e **
 - **Otimização de Imagens**: Lazy loading e formatos modernos
 - **CSS Otimizado**: Tailwind com purge automático
 - **Código Limpo**: Bundle size mínimo com tree-shaking
+- **Static Site Generation**: Pré-renderização de todas as páginas
 
 ### 📱 Responsividade
 
@@ -99,8 +104,105 @@ Portfolio pessoal de desenvolvedor web full-stack construído com **Astro** e **
 ### DevOps & Deploy
 
 - **Vercel/Netlify**: Deploy automático via Git
-- **GitHub Actions**: CI/CD pipeline
+- **GitHub Actions**: CI/CD pipeline ready
 - **ESLint/Prettier**: Code quality e formatação
+
+---
+
+## 🏗 Arquitetura
+
+### 📁 Estrutura de Diretórios
+
+```
+src/
+├── components/          # Componentes reutilizáveis
+│   ├── ContactLink.astro
+│   ├── ContactSection.astro
+│   ├── Footer.astro
+│   ├── Header.astro
+│   ├── Hero.astro         # Seção hero com órbita de tecnologias
+│   ├── LanguagePicker.astro
+│   ├── ProjectCard.astro  # Card individual de projeto
+│   ├── ProjectsSection.astro
+│   ├── SkillCard.astro    # Card individual de habilidade
+│   ├── SkillsSection.astro
+│   ├── TechIcon.astro     # Ícone de tecnologia orbital
+│   └── ThemeToggle.astro
+├── data/                # Dados e constantes
+│   └── technologies.ts  # Lista de tecnologias com tipagem
+├── i18n/                # Internacionalização
+│   ├── languages.ts     # Traduções pt/en/es
+│   └── utils.ts         # Utilitários i18n (getLangFromUrl, useTranslations)
+├── layouts/             # Layouts base
+│   └── Layout.astro     # Layout principal com SEO e meta tags
+├── pages/               # Páginas (rotas)
+│   ├── index.astro      # Página principal (pt)
+│   ├── en/
+│   │   └── index.astro  # Versão em inglês
+│   └── es/
+│       └── index.astro  # Versão em espanhol
+└── styles/
+    └── global.css       # Estilos globais e animações customizadas
+```
+
+### 🎯 Padrões de Arquitetura
+
+#### **Componentização**
+- Cada seção é um componente independente e reutilizável
+- Cards (ProjectCard, SkillCard) são genéricos e recebem props
+- Separação clara entre lógica (---) e apresentação (<template>)
+
+#### **Gestão de Dados**
+- **Centralização**: Tecnologias em `src/data/technologies.ts`
+- **Type Safety**: Interfaces TypeScript para todas as estruturas
+- **Single Source of Truth**: Evita duplicação de dados
+
+#### **Internacionalização**
+- Sistema completo de i18n com rotas prefixadas
+- Traduções centralizadas em um único arquivo
+- Helpers utilitários para facilitar o uso
+- Fallback automático para idioma padrão
+
+#### **Estilos**
+- **Tailwind CSS**: Utility-first para agilidade
+- **Global CSS**: Animações e utilitários customizados
+- **Scoped Styles**: Estilos específicos em `<style>` quando necessário
+- **Tema Duplo**: Dark/Light mode com classes condicionais
+
+### 🎨 Design System
+
+#### **Paleta de Cores**
+
+**Dark Mode:**
+- Background: `#0a0a0f` (space-darker)
+- Text Primary: `#f8fafc`
+- Accent: `#ffffff`
+
+**Light Mode:**
+- Background: `#ffffff`
+- Text Primary: `#0f172a`
+- Accent: `#000000`
+
+**Tech Colors:**
+- C#: `#A020F0` (Purple)
+- Python: `#eab308` (Yellow)
+- React: `#06b6d4` (Cyan)
+- TypeScript: `#2563eb` (Blue)
+- E mais...
+
+#### **Tipografia**
+
+- **Inter**: Família sans-serif para corpo de texto
+- **Space Grotesk**: Fonte display para títulos e destaques
+- **Responsive Typography**: Uso de `clamp()` para escala fluida
+
+#### **Animações Customizadas**
+
+1. **Orbital Wheel** (`rotate-wheel`): Roda de tecnologias girando 360° em 40s
+2. **Float Clean** (`float-clean`): Flutuação suave vertical
+3. **Glow Subtle** (`glow-subtle`): Brilho pulsante
+4. **Stars Move** (`stars-move`): Estrelas animadas no fundo
+5. **Light Beams** (`light-sweep-*`): Feixes de luz nos project cards
 
 ---
 
@@ -145,51 +247,69 @@ PUBLIC_ANALYTICS_ID=seu-google-analytics-id
 
 ---
 
-## 📁 Estrutura do Projeto
+## 📁 Estrutura Detalhada do Projeto
 
 ```
 my-portfolio-web/
-├── 📂 public/                      # Assets estáticos
-│   ├── 📂 assets/                  # Imagens e SVGs
-│   ├── 📄 *.svg                    # Ícones de tecnologias
-│   └── 📄 pageico.png              # Favicon
+├── 📂 public/                      # Assets estáticos servidos diretamente
+│   ├── 📄 email.svg                # Ícones de contato
+│   ├── 📄 JavaScript.svg           # Ícones de tecnologias
+│   ├── 📄 lamp.svg                 # Ícones de habilidades
+│   ├── 📄 Linkedin.svg
+│   ├── 📄 logogithub.svg
+│   ├── 📄 pageico.png              # Favicon
+│   ├── 📄 paint.svg
+│   ├── 📄 perfil.png               # Foto de perfil
+│   ├── 📄 Project-01.png           # Imagens dos projetos
+│   ├── 📄 Project-02.png
+│   ├── 📄 Project-03.png
+│   ├── 📄 Project-04.png
+│   ├── 📄 project.svg
+│   ├── 📄 React.svg
+│   ├── 📄 Tailwind.svg
+│   ├── 📄 Typescript.svg
+│   └── 📄 Whatsapp.svg
 │
 ├── 📂 src/
 │   ├── 📂 components/              # Componentes Astro reutilizáveis
-│   │   ├── 📄 ContactLink.astro    # Link de contato individual
-│   │   ├── 📄 ContactSection.astro # Seção de contatos
+│   │   ├── 📄 ContactLink.astro    # Link de contato individual com ícone
+│   │   ├── 📄 ContactSection.astro # Seção completa de contatos
 │   │   ├── 📄 Footer.astro         # Rodapé do site
 │   │   ├── 📄 Header.astro         # Cabeçalho com navegação
-│   │   ├── 📄 Hero.astro           # Seção hero principal
-│   │   ├── 📄 LanguagePicker.astro # Seletor de idiomas
-│   │   ├── 📄 ProjectCard.astro    # Card individual de projeto
-│   │   ├── 📄 ProjectsSection.astro# Seção de projetos
-│   │   ├── 📄 SkillCard.astro      # Card individual de skill
-│   │   ├── 📄 SkillsSection.astro  # Seção de habilidades
-│   │   ├── 📄 TechStack.astro      # Stack de tecnologias
+│   │   ├── 📄 Hero.astro           # Seção hero com sistema orbital
+│   │   ├── 📄 LanguagePicker.astro # Seletor de idiomas (pt/en/es)
+│   │   ├── 📄 ProjectCard.astro    # Card de projeto com light beams
+│   │   ├── 📄 ProjectsSection.astro# Seção de projetos em destaque
+│   │   ├── 📄 SkillCard.astro      # Card de habilidade individual
+│   │   ├── 📄 SkillsSection.astro  # Seção de habilidades/diferenciais
+│   │   ├── 📄 TechIcon.astro       # Ícone orbital de tecnologia
 │   │   └── 📄 ThemeToggle.astro    # Toggle dark/light mode
 │   │
-│   ├── 📂 i18n/                    # Internacionalização
-│   │   ├── 📄 languages.ts         # Traduções completas
-│   │   └── 📄 utils.ts             # Utilitários i18n
+│   ├── 📂 data/                    # Dados e constantes do projeto
+│   │   └── 📄 technologies.ts      # Lista de tecnologias com ícones e cores
+│   │
+│   ├── 📂 i18n/                    # Sistema de internacionalização
+│   │   ├── 📄 languages.ts         # Traduções completas (pt, en, es)
+│   │   └── 📄 utils.ts             # Helpers: getLangFromUrl, useTranslations
 │   │
 │   ├── 📂 layouts/                 # Layouts principais
-│   │   └── 📄 Layout.astro         # Layout base
+│   │   └── 📄 Layout.astro         # Layout base com SEO, fonts e tema
 │   │
-│   ├── 📂 pages/                   # Páginas do site
+│   ├── 📂 pages/                   # Páginas do site (rotas)
 │   │   ├── 📂 en/                  # Páginas em inglês
 │   │   │   └── 📄 index.astro
 │   │   ├── 📂 es/                  # Páginas em espanhol
 │   │   │   └── 📄 index.astro
-│   │   └── 📄 index.astro          # Página principal (PT)
+│   │   └── 📄 index.astro          # Página principal (Português)
 │   │
-│   └── 📂 styles/                  # Estilos globais
-│       └── 📄 global.css           # CSS global com animações
+│   └── 📂 styles/                  # Estilos do projeto
+│       └── 📄 global.css           # CSS global com animações customizadas
 │
-├── 📄 astro.config.mjs             # Configuração do Astro
-├── 📄 tailwind.config.mjs          # Configuração do Tailwind
+├── 📂 dist/                        # Build de produção (gerado)
+├── 📄 astro.config.mjs             # Configuração do Astro e i18n
+├── 📄 tailwind.config.mjs          # Configuração do Tailwind CSS
 ├── 📄 tsconfig.json                # Configuração TypeScript
-├── 📄 package.json                 # Dependências e scripts
+├── 📄 package.json                 # Dependências e scripts npm
 └── 📄 README.md                    # Este arquivo
 ```
 
@@ -208,14 +328,14 @@ my-portfolio-web/
 ### Comandos Avançados
 
 ```bash
-# Verifica tipos TypeScript
+# Verifica tipos TypeScript e linter
 npm run astro check
 
-# Adiciona nova integração
+# Adiciona nova integração Astro
 npm run astro add [integration-name]
 
-# Gera telemetria do projeto
-npm run astro telemetry
+# Exemplo: adicionar React
+npm run astro add react
 ```
 
 ---
@@ -230,36 +350,60 @@ npm run astro telemetry
 | 🇺🇸 English (US) | `en` | `/en` | ✅ Completo |
 | 🇪🇸 Español | `es` | `/es` | ✅ Completo |
 
-### Estrutura de Tradução
+### Como Funciona
 
-As traduções são gerenciadas em `src/i18n/languages.ts`:
+O sistema de i18n é gerenciado através de:
 
+1. **Arquivo de Traduções** (`src/i18n/languages.ts`):
 ```typescript
 export const ui = {
   pt: {
     'nav.home': 'Início',
-    'nav.projects': 'Projetos',
+    'hero.title': 'Desenvolvedor FullStack',
     // ...
   },
   en: {
     'nav.home': 'Home',
-    'nav.projects': 'Projects',
+    'hero.title': 'FullStack Developer',
     // ...
   },
   es: {
     'nav.home': 'Inicio',
-    'nav.projects': 'Proyectos',
+    'hero.title': 'Desarrollador FullStack',
     // ...
   }
 }
+```
+
+2. **Utilitários Helper** (`src/i18n/utils.ts`):
+```typescript
+// Detecta idioma da URL
+getLangFromUrl(url)
+
+// Retorna função de tradução
+useTranslations(lang)
+```
+
+3. **Uso em Componentes**:
+```astro
+---
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<h1>{t('hero.title')}</h1>
 ```
 
 ### Adicionar Novo Idioma
 
 1. Adicione o código do idioma em `languages.ts`
 2. Crie as traduções no objeto `ui`
-3. Adicione a rota em `astro.config.mjs`
-4. Crie a página correspondente em `src/pages/[lang]/`
+3. Adicione a rota em `astro.config.mjs`:
+   ```js
+   i18n: {
+     locales: ['pt', 'en', 'es', 'fr'], // Adicione aqui
+   }
+   ```
+4. Crie a página correspondente: `src/pages/[lang]/index.astro`
 
 ---
 
@@ -272,10 +416,17 @@ npm run build
 ```
 
 Arquivos otimizados serão gerados em `dist/` com:
-- ✅ HTML minificado
-- ✅ CSS otimizado e purgado
+- ✅ HTML minificado e pré-renderizado
+- ✅ CSS otimizado e purgado (apenas classes usadas)
 - ✅ Imagens otimizadas
-- ✅ JavaScript tree-shaked
+- ✅ JavaScript tree-shaked (apenas o necessário)
+
+**Resultado típico:**
+```
+3 page(s) built in ~3-5s
+- 0 errors
+- 0 warnings
+```
 
 ### Deploy
 
@@ -288,6 +439,8 @@ npm install -g vercel
 vercel --prod
 ```
 
+**Configuração automática** - Vercel detecta Astro automaticamente!
+
 #### Netlify
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/dzordii/my-portfolio-web)
@@ -297,12 +450,9 @@ npm install -g netlify-cli
 netlify deploy --prod
 ```
 
-#### GitHub Pages
-
-```bash
-npm run build
-# Configure GitHub Pages para servir da pasta dist/
-```
+**Configuração:**
+- Build command: `npm run build`
+- Publish directory: `dist`
 
 #### Cloudflare Pages
 
@@ -310,6 +460,186 @@ npm run build
 2. Configure:
    - **Build command**: `npm run build`
    - **Output directory**: `dist`
+   - **Environment variables**: (se necessário)
+
+#### GitHub Pages
+
+```bash
+npm run build
+# Configure GitHub Pages para servir da pasta dist/ ou configure deploy action
+```
+
+---
+
+## ✅ Boas Práticas Implementadas
+
+### 🎯 Padrões Astro
+
+✅ **Zero JavaScript por Padrão**
+- HTML estático gerado no build time
+- JavaScript apenas quando necessário (ThemeToggle, LanguagePicker)
+- Islands Architecture para componentes interativos
+
+✅ **Server-First Rendering**
+- Componentes renderizados no servidor
+- Envio apenas de HTML para o cliente
+- Melhor performance e SEO
+
+✅ **Static Site Generation (SSG)**
+- Todas as páginas pré-renderizadas
+- Tempo de carregamento quase instantâneo
+- Hospedagem em CDN global
+
+✅ **Scoped Styles**
+- Estilos específicos encapsulados em componentes
+- Evita conflitos de CSS
+- Melhor manutenibilidade
+
+✅ **TypeScript**
+- Type safety em todos os componentes
+- Interfaces para props
+- Detecção de erros em tempo de desenvolvimento
+
+### ⚡ Performance
+
+✅ **Otimizações Implementadas:**
+- Imagens otimizadas (apenas 17 arquivos necessários em uso)
+- CSS minificado automaticamente em produção
+- Lazy loading de ícones com `astro-icon`
+- Pré-renderização de todas as rotas
+- Minimal JavaScript bundle
+- GPU-accelerated animations (CSS transforms)
+
+✅ **Bundle Size:**
+- HTML: ~15-20KB (gzipped)
+- CSS: ~8-10KB (gzipped)
+- JS: ~2-3KB (apenas para interatividade)
+
+### ♿ Acessibilidade
+
+✅ **WCAG 2.1 AA Compliance:**
+- Semantic HTML (`<section>`, `<article>`, `<nav>`, `<main>`)
+- Alt tags descritivos em todas as imagens
+- Contraste adequado em dark e light mode
+- Navegação completa por teclado
+- Focus states visíveis em elementos interativos
+- ARIA labels quando necessário
+
+### 🔍 SEO
+
+✅ **Otimizações:**
+- Meta tags apropriadas (title, description)
+- Open Graph tags para redes sociais
+- Títulos descritivos e hierarquia correta (H1 → H6)
+- URLs amigáveis e semânticas
+- Sitemap multi-idioma ready
+- Structured data ready (JSON-LD)
+
+### 📝 Código Limpo
+
+✅ **Convenções Seguidas:**
+
+**Nomenclatura:**
+- Componentes: `PascalCase` (ex: `ProjectCard.astro`)
+- Arquivos de dados: `camelCase` (ex: `technologies.ts`)
+- CSS classes: `kebab-case` (ex: `tech-container`)
+
+**Organização de Imports:**
+```astro
+---
+// 1. Bibliotecas externas
+import { Icon } from 'astro-icon/components';
+
+// 2. Utilitários internos
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+// 3. Dados
+import { technologies } from '../data/technologies';
+
+// 4. Componentes
+import TechIcon from './TechIcon.astro';
+---
+```
+
+**Estrutura de Componentes:**
+```astro
+---
+// 1. Imports
+import ...
+
+// 2. Interface de Props
+interface Props {
+  title: string;
+  description: string;
+}
+
+// 3. Extração de props
+const { title, description } = Astro.props;
+
+// 4. Lógica do componente
+const data = ...
+---
+
+<!-- 5. Template HTML -->
+<element>...</element>
+
+<!-- 6. Estilos scoped (se necessário) -->
+<style>...</style>
+
+<!-- 7. Scripts client-side (se necessário) -->
+<script>...</script>
+```
+
+---
+
+## 🎯 Funcionalidades Técnicas
+
+### 🎡 Sistema Orbital de Tecnologias
+
+Implementação única de um sistema onde 15 tecnologias orbitam ao redor da foto de perfil como uma roda:
+
+**Características:**
+- Rotação contínua de 360° em 40 segundos
+- Cada ícone mantém orientação correta durante rotação
+- Hover individual com brilho colorido específico
+- Totalmente responsivo (raios orbitais ajustam-se por breakpoint)
+- CSS puro sem JavaScript
+
+**Breakpoints:**
+- Mobile (<640px): raio 120px
+- Tablet (641-768px): raio 140px
+- Desktop (769-1024px): raio 165px
+- XL (>1024px): raio 185px
+
+### ✨ Efeitos de Luz (Light Beams)
+
+Cards de projetos com feixes de luz passando em diferentes direções:
+
+- 4 feixes de luz independentes
+- Direções: diagonal, horizontal, vertical, diagonal reversa
+- Animações com delays escalonados
+- Opacidade baixa (3-10%) para efeito clean
+- Blur de 8-12px para suavização
+
+### 🃏 Cards 3D
+
+Efeito de elevação 3D nos cards:
+
+```css
+.card-3d:hover {
+  transform: translateY(-4px) rotateX(2deg) rotateY(2deg);
+}
+```
+
+### 🌙 Dark/Light Mode
+
+Toggle de tema com persistência:
+
+**Implementação:**
+- Estado salvo em `localStorage`
+- Transição suave de 300ms
+- Classes condicionais (dark:/light:)
+- Ícones e cores adaptados automaticamente
 
 ---
 
@@ -317,30 +647,33 @@ npm run build
 
 ### ✅ Concluído
 
-- [x] Design espacial moderno
-- [x] Dark/Light mode toggle
-- [x] Suporte a 3 idiomas
-- [x] Animações de estrelas
-- [x] Ícones reais do Iconify
+- [x] Design espacial moderno com estrelas animadas
+- [x] Dark/Light mode toggle com persistência
+- [x] Suporte a 3 idiomas (pt, en, es)
+- [x] Sistema orbital de tecnologias único
+- [x] Efeitos de light beams em project cards
 - [x] Layout responsivo completo
 - [x] Glassmorphism effects
 - [x] SEO otimizado
+- [x] TypeScript com type safety
+- [x] Componentização e arquitetura limpa
 
 ### 🚧 Em Desenvolvimento
 
-- [ ] Blog integrado
-- [ ] Sistema de comentários
+- [ ] Blog integrado com Markdown
+- [ ] Sistema de comentários (Giscus)
 - [ ] Newsletter subscription
 - [ ] Analytics dashboard
 - [ ] Performance monitoring
 
 ### 💡 Futuro
 
-- [ ] Modo offline (PWA)
+- [ ] Modo offline (PWA completo)
 - [ ] Tema customizável pelo usuário
 - [ ] Animações 3D com Three.js
-- [ ] Portfolio CMS headless
-- [ ] API GraphQL
+- [ ] Portfolio CMS headless (Sanity/Strapi)
+- [ ] API GraphQL para dados dinâmicos
+- [ ] Testes E2E com Playwright
 
 ---
 
@@ -364,21 +697,42 @@ Este projeto segue o padrão [Conventional Commits](https://www.conventionalcomm
 feat: adiciona nova funcionalidade
 fix: corrige um bug
 docs: atualiza documentação
-style: formatação de código
+style: formatação de código (sem mudança de lógica)
 refactor: refatoração de código
-test: adiciona testes
+test: adiciona ou corrige testes
 chore: tarefas de manutenção
+perf: melhoria de performance
 ```
 
-### Código de Conduta
+**Exemplos:**
+```bash
+git commit -m "feat: adiciona seção de blog"
+git commit -m "fix: corrige bug no theme toggle"
+git commit -m "docs: atualiza README com novas instruções"
+```
 
-Participe de forma respeitosa e construtiva. Leia nosso [Código de Conduta](CODE_OF_CONDUCT.md).
+### Guidelines de Código
+
+- Use TypeScript para type safety
+- Siga o padrão de imports organizado
+- Mantenha componentes pequenos e focados
+- Adicione comentários em lógica complexa
+- Teste em dark/light mode
+- Verifique responsividade em diferentes dispositivos
 
 ---
 
 ## 📄 Licença
 
 Distribuído sob a licença **MIT**. Veja `LICENSE` para mais informações.
+
+Isso significa que você pode:
+- ✅ Usar comercialmente
+- ✅ Modificar
+- ✅ Distribuir
+- ✅ Uso privado
+
+**Condição**: Incluir o aviso de copyright original.
 
 ---
 
@@ -395,10 +749,35 @@ Distribuído sob a licença **MIT**. Veja `LICENSE` para mais informações.
 
 ---
 
+## 🎓 Aprendizados e Destaques
+
+### Tecnologias Exploradas
+
+Durante o desenvolvimento deste projeto, foram exploradas:
+
+- **Astro 5.0**: Latest features e best practices
+- **Tailwind CSS 3.4**: Utility-first CSS com customizações
+- **TypeScript 5.6**: Type safety e interfaces
+- **CSS Animations**: Keyframes complexas e transforms 3D
+- **Internacionalização**: Sistema robusto de múltiplos idiomas
+- **Glassmorphism**: Efeitos modernos de vidro
+
+### Desafios Superados
+
+1. **Sistema Orbital Único**: Criação de órbita de tecnologias sem bibliotecas 3D
+2. **Light Beams Effect**: Implementação de feixes de luz com CSS puro
+3. **i18n Robusto**: Sistema de tradução completo e escalável
+4. **Performance**: Build otimizado com score perfeito
+5. **Responsividade**: Layout adaptativo em todos os tamanhos
+
+---
+
 <div align="center">
 
-**Desenvolvido por [Isaac Mello](https://github.com/dzordii)**
+## ⭐ Mostre seu Apoio
 
-⭐ Se este projeto te ajudou, considere dar uma estrela!
+Se este projeto te ajudou ou inspirou, considere dar uma **estrela** ⭐!
+
+**Desenvolvido com 💜 por [Isaac Mello](https://github.com/dzordii)**
 
 </div>

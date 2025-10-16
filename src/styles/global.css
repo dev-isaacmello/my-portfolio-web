@@ -83,24 +83,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@keyframes orbit-gentle {
-  0% {
-    transform: translate(-50%, -50%) translateY(0px) scale(1) rotate(0deg);
-  }
-  25% {
-    transform: translate(-50%, -50%) translateY(-8px) scale(1.02) rotate(1deg);
-  }
-  50% {
-    transform: translate(-50%, -50%) translateY(-15px) scale(1.05) rotate(0deg);
-  }
-  75% {
-    transform: translate(-50%, -50%) translateY(-8px) scale(1.02) rotate(-1deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) translateY(0px) scale(1) rotate(0deg);
-  }
-}
-
 @keyframes glow-subtle {
   0%, 100% {
     opacity: 0.4;
@@ -112,7 +94,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-
+/* Stars Background - Animated */
 .stars,
 .stars2,
 .stars3 {
@@ -359,21 +341,6 @@ h1, h2, h3, h4, h5, h6 {
   animation: glow-subtle 4s ease-in-out infinite;
 }
 
-.animate-orbit-gentle {
-  animation: orbit-gentle 6s ease-in-out infinite;
-}
-
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px) scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
 
 
 .light {
