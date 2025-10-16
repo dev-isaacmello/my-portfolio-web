@@ -1,0 +1,78 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+  action: string;
+  techs: string;
+}
+
+const { title, description, image, link, action, techs } = Astro.props;
+---
+
+<article class="project-card card-clean card-3d glassmorphism-clean rounded-3xl overflow-hidden bg-slate-900/50 h-full flex flex-col group">
+  <div class="card-glow"></div>
+  
+  <div class="relative h-56 sm:h-64 lg:h-72 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent z-10"></div>
+    <img 
+      src={image} 
+      alt={title}
+      class="card-image w-full h-full object-cover transform group-hover:scale-105 transition-all duration-500"
+    />
+    
+    <div class="absolute top-4 right-4 z-20 flex gap-2">
+      <div class="glassmorphism-clean rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+        </svg>
+      </div>
+    </div>
+    
+    <div class="absolute bottom-4 left-4 z-20">
+      <span class="px-3 py-1 text-xs font-semibold bg-indigo-500/20 text-indigo-300 rounded-full border border-indigo-500/30 backdrop-blur-sm">
+        Projeto
+      </span>
+    </div>
+  </div>
+  
+  <div class="card-content p-6 sm:p-8 space-y-6 flex flex-col flex-grow">
+    <div class="space-y-3">
+      <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold font-display text-contrast group-hover:text-white transition-colors duration-300 leading-tight">
+        {title}
+      </h3>
+      
+      <p class="text-slate-400 text-base sm:text-lg leading-relaxed flex-grow">
+        {description}
+      </p>
+    </div>
+    
+    <div class="space-y-3">
+      <h4 class="text-sm font-semibold text-slate-300 uppercase tracking-wider">Tecnologias</h4>
+      <div class="flex flex-wrap gap-2">
+        {techs.split(',').map((tech) => (
+          <span class="px-3 py-1 text-sm font-medium bg-indigo-500/10 text-indigo-400 rounded-full border border-indigo-500/20 hover:bg-indigo-500/20 hover:border-indigo-400/40 transition-all duration-300">
+            {tech.trim()}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    <div class="pt-4">
+      <a 
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group/btn relative inline-flex items-center justify-center gap-3 px-6 py-4 rounded-xl font-semibold overflow-hidden transition-all duration-300 w-full btn-clean text-base"
+      >
+        <span class="relative text-white flex items-center gap-2">
+          {action}
+          <svg class="w-5 h-5 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+          </svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</article>

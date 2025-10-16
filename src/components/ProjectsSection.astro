@@ -1,0 +1,80 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import ProjectCard from './ProjectCard.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const projects = [
+  {
+    title: t('project.1.title'),
+    description: t('project.1.description'),
+    image: '/Project-01.png',
+    link: 'https://github.com/dzordii/travelgram-project.git',
+    action: t('project.1.action'),
+    techs: t('project.1.techs'),
+  },
+  {
+    title: t('project.2.title'),
+    description: t('project.2.description'),
+    image: '/Project-02.png',
+    link: 'https://barbeariaurbancut.com.br/',
+    action: t('project.2.action'),
+    techs: t('project.2.techs'),
+  },
+  {
+    title: t('project.3.title'),
+    description: t('project.3.description'),
+    image: '/Project-03.png',
+    link: 'https://github.com/dzordii/my-portfolio-web',
+    action: t('project.3.action'),
+    techs: t('project.3.techs'),
+  },
+  {
+    title: t('project.4.title'),
+    description: t('project.4.description'),
+    image: '/Project-04.png',
+    link: 'https://github.com/dzordii/petdev.git',
+    action: t('project.4.action'),
+    techs: t('project.4.techs'),
+  },
+];
+---
+
+<section id="projects" class="py-20 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 relative">
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-900/5 to-transparent pointer-events-none"></div>
+  
+  <div class="container mx-auto max-w-7xl relative">
+    <div class="text-center space-y-6 mb-16 sm:mb-20 lg:mb-24">
+      <div class="inline-flex items-center px-6 py-3 rounded-full glassmorphism-clean border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300">
+        <div class="w-3 h-3 bg-cyan-400 rounded-full animate-pulse mr-4"></div>
+        <p class="text-cyan-400 text-sm sm:text-base font-semibold tracking-wider uppercase">
+          {t('projects.header')}
+        </p>
+      </div>
+      
+      <h2 class="text-responsive-lg font-bold font-display leading-tight">
+        <span class="holographic-clean">
+          {t('projects.title')}
+        </span>
+      </h2>
+      
+      <p class="text-slate-400 text-responsive-md max-w-3xl mx-auto leading-relaxed">
+        {t('projects.description')}
+      </p>
+      
+      <div class="w-20 sm:w-24 h-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 mx-auto rounded-full"></div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+      {projects.map((project, index) => (
+        <div 
+          class="transform transition-all duration-500 hover:scale-105"
+          style={`animation-delay: ${index * 0.1}s`}
+        >
+          <ProjectCard {...project} />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

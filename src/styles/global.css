@@ -1,0 +1,293 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.card-3d {
+  transform-style: preserve-3d;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card-3d:hover {
+  transform: translateY(-4px) rotateX(2deg) rotateY(2deg);
+  box-shadow: 
+    0 20px 40px -12px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(99, 102, 241, 0.1),
+    0 0 20px rgba(99, 102, 241, 0.1);
+}
+
+.card-3d:hover .card-image {
+  transform: scale(1.02) translateZ(10px);
+}
+
+.card-3d:hover .card-content {
+  transform: translateZ(5px);
+}
+
+.card-glow {
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(45deg, #6366f1, #8b5cf6, #3b82f6);
+  border-radius: inherit;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  z-index: -1;
+  filter: blur(4px);
+}
+
+.card-3d:hover .card-glow {
+  opacity: 0.3;
+  transform: scale(1.05);
+}
+
+.glassmorphism-clean {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.light .glassmorphism-clean {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+@keyframes float-clean {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes glow-subtle {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.stars,
+.stars2,
+.stars3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.dark .stars {
+  background-image: 
+    radial-gradient(1px 1px at 20px 30px, #eee, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 60px 70px, #fff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 50px 50px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 130px 80px, #fff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 90px 10px, #eee, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: space 200s linear infinite;
+  opacity: 0.2;
+}
+
+.dark .stars2 {
+  background-image: 
+    radial-gradient(1px 1px at 100px 150px, #fff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 200px 250px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 50px 100px, #eee, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 300px 300px;
+  animation: space 300s linear infinite;
+  opacity: 0.1;
+}
+
+.dark .stars3 {
+  background-image: 
+    radial-gradient(1px 1px at 300px 200px, #fff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 400px 400px, #ddd, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 500px 500px;
+  animation: space 400s linear infinite;
+  opacity: 0.05;
+}
+
+@keyframes space {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
+.glow-text-clean {
+  text-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
+}
+
+.light .glow-text-clean {
+  text-shadow: 0 2px 4px rgba(99, 102, 241, 0.1);
+}
+
+.btn-clean {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.btn-clean:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 10px 25px rgba(99, 102, 241, 0.2),
+    0 0 15px rgba(139, 92, 246, 0.1);
+}
+
+.btn-clean::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-clean:hover::before {
+  left: 100%;
+}
+
+.text-responsive-xl {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1.1;
+}
+
+.text-responsive-lg {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.2;
+}
+
+.text-responsive-md {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  line-height: 1.5;
+}
+
+.holographic-clean {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6, #3b82f6);
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.card-clean {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card-clean:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 
+    0 20px 40px -12px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(99, 102, 241, 0.1),
+    0 0 20px rgba(99, 102, 241, 0.1);
+}
+
+.space-responsive {
+  padding: clamp(1.5rem, 5vw, 3rem);
+}
+
+.space-responsive-sm {
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.grid-clean {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+@media (min-width: 768px) {
+  .grid-clean {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-clean {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.text-contrast {
+  color: #f8fafc;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.card-clean:hover .text-contrast {
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.animate-float-clean {
+  animation: float-clean 6s ease-in-out infinite;
+}
+
+.animate-glow-subtle {
+  animation: glow-subtle 4s ease-in-out infinite;
+}
