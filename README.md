@@ -9,7 +9,7 @@
 
 **Portfólio profissional desenvolvido com tecnologias modernas e design espacial futurista**
 
-[Demo ao Vivo](https://seu-portfolio.vercel.app) · [Reportar Bug](https://github.com/dzordii/my-portfolio-web/issues) · [Solicitar Feature](https://github.com/dzordii/my-portfolio-web/issues)
+[Demo ao Vivo](https://isaacmello-portfoliodev.netlify.app) · [Reportar Bug](https://github.com/dzordii/my-portfolio-web/issues) · [Solicitar Feature](https://github.com/dzordii/my-portfolio-web/issues)
 
 </div>
 
