@@ -36,7 +36,7 @@
 
 ## 🎯 Sobre o Projeto
 
-Portfolio pessoal de desenvolvedor web full-stack construído com **Astro** e **Tailwind CSS**, apresentando um design espacial moderno com animações suaves, suporte multilíngue completo e toggle dark/light mode com persistência de estado.
+Portfolio pessoal de desenvolvedor full-stack construído com **Astro** e **Tailwind CSS**, apresentando um design espacial moderno com animações suaves, suporte multilíngue completo e toggle dark/light mode com persistência de estado.
 
 ### ✨ Por que este projeto?
 
@@ -738,7 +738,7 @@ Isso significa que você pode:
 
 ## 📞 Contato
 
-**Isaac Mello** - Desenvolvedor Web Full Stack
+**Isaac Mello** - Desenvolvedor Full Stack
 
 [![GitHub](https://img.shields.io/badge/GitHub-dzordii-181717?style=for-the-badge&logo=github)](https://github.com/dzordii)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Isaac_Mello-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/isaac-mello-168404281/)
