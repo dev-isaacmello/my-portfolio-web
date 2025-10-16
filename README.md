@@ -778,6 +778,6 @@ Durante o desenvolvimento deste projeto, foram exploradas:
 
 Se este projeto te ajudou ou inspirou, considere dar uma **estrela** ⭐!
 
-**Desenvolvido com 💜 por [Isaac Mello](https://github.com/dzordii)**
+**Desenvolvido por [Isaac Mello](https://github.com/dzordii)**
 
 </div>
