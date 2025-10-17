@@ -79,10 +79,10 @@ export const ui = {
     'projects.header': 'My Projects',
     'projects.title': 'Featured Projects',
 
-    'project.1.title': 'SPORTS API RESTFUL',
-    'project.1.description': 'API REST completa desenvolvida em C# .NET 9.0 para gerenciamento de reservas de quadras esportivas, implementando Clean Architecture, autenticação JWT e lógicas de negócio robustas.',
+    'project.1.title': 'SPORTS RESTFUL API',
+    'project.1.description': 'Complete REST API developed in C# .NET 9.0 for managing sports court reservations, implementing Clean Architecture, JWT authentication and robust business logic.',
     'project.1.action': 'View Repository',
-    'project.1.techs': 'C#, .NET, PostgreSQL, JWT, Swagger, Docker, API REST, SOLID, Design Patterns, Clean Architecture',
+    'project.1.techs': 'C#, .NET, PostgreSQL, JWT, Swagger, Docker, REST API, SOLID, Design Patterns, Clean Architecture',
 
     'project.2.title': 'Dzordi Panel',
     'project.2.description': 'Professional panel for managing mods for FiveM with Discord authentication. Install, manage and uninstall graphics mods and weapon skins for FiveM easily.',
@@ -94,10 +94,10 @@ export const ui = {
     'project.3.action': 'View Publication',
     'project.3.techs': 'Python, Agno Framework, OpenAI API, FastAPI, Node, Typescript, Whatsapp API, PostgreSQL, Docker',
 
-    'project.4.title': 'Website of Pet Shop',
-    'project.4.description': 'Fictional project of a Pet Shop, using AOS to create animations and user interactions.',
+    'project.4.title': 'Pet Shop Website',
+    'project.4.description': 'Project of a Pet Shop, using AOS to create animations and user interactions.',
     'project.4.action': 'View Repository',
-    'project.4.techs': 'Nextjs, Typescript, Tailwind CSS, AOS',
+    'project.4.techs': 'Next.js, Typescript, Tailwind CSS, AOS',
     'skills.header': 'My Differentials',
     'skills.title': 'How I can help your business',
     'skill.1.title': 'Continuous Learning and Sharing',
