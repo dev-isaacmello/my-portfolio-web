@@ -54,7 +54,7 @@ export const ui = {
     'skill.3.description': 'Acredito que um bom design faz toda a diferença. Utilizo Tailwind CSS para criar interfaces modernas e responsivas, focando na experiência do usuário e na performance para garantir aplicações rápidas e eficientes.',
     'contact.header': 'Contato',
     'contact.title': 'Gostou do meu trabalho?',
-    'contact.description': 'Entre em contAstroato comigo ou acompanhe minhas redes sociais!',
+    'contact.description': 'Entre em contato comigo ou acompanhe minhas redes sociais!',
     'contact.github': 'GitHub',
     'contact.linkedin': 'Linkedin',
     'contact.whatsapp': 'Whatsapp',
